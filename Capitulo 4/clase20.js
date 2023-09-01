@@ -72,5 +72,7 @@ var personasCms = personas.map(pasarAlturaCms)
 //     acum = acum + personas[i].cantidadDeLibros
 // }
 //console.log(`En total todos tienen ${acum} libros`)
+const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros
 
-console.log(personasCms)
+var totalDeLibros = personas.reduce(reducer, 0)
+console.log(`En total todos tienen ${totalDeLibros} libros`)

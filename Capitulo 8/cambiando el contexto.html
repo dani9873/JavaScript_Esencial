@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const daniel ={
+            nombre:'Daniel',
+            apellido:'Escobar',
+            edad: 23
+        }
+
+        const juan ={
+            nombre:'Juan',
+            apellido:'Escobar',
+            edad: 23
+        }
+
+        function saludar(saludo='Hola'){
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+        //const saludarDaniel= saludar.bind(daniel)
+        //setTimeout(saludar.bind(daniel, 'Hola che '),1000)
+        //saludar.call(daniel, 'Hola che')
+        saludar.apply(daniel,['Hola che'])
+    </script>
+</body>
+</html>
